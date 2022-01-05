@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalila & Khayyum</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Raleway&display=swap" rel="stylesheet">
+
+    
+    <style>
+        html{
+            background: url("Image/temp5\(1\).jpg") no-repeat center center fixed;
+            -moz-background-size:cover;
+            -webkit-background-size: cover;
+            -o-background-size:cover;
+            background-size: cover;
+        }
+        *{
+            margin:0 auto;
+        }
+        footer{
+            margin-top: 50px;
+            left: 0;
+            bottom: 50px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .50);
+            backdrop-filter: blur(3px);
+            display: block;
+        }
+        .but{
+            background-color: silver;
+            border: 1px solid black;
+            padding: 15px 32px;
+            text-decoration: none;
+            font-size: larger;
+            margin: 4px 2px;
+            border-radius: 12px;
+            font-family: 'Langar', cursive;
+            color: #5E5C5D;
+            
+        }
+
+        /* Clock */
+        #clock #time{
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        #clock #time .t{
+            position: relative;
+            margin: 0 5px;
+        }
+        #clock #time .t span{
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(3px);
+            color:black;
+            font-weight: 300;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            z-index: 10;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+        }
+        #clock #time .t span:nth-child(2){
+            height: 30px;
+            line-height: 30px;
+            font-size: .7em;
+            letter-spacing: .2em;
+            font-weight: 500;
+            z-index: 9;
+            box-shadow: none;
+            background-color: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(1px);
+            text-transform: uppercase;
+            color: black;
+        }
+
+
+        .details{
+            width: 80%;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, .50);
+            backdrop-filter: blur(3px);
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            padding-bottom: 30px;
+            margin-top: 50px;
+        }
+
+        .jawi{
+            width: 150px;
+        }
+        hr{
+            width: 50%;
+            border-top: 3px solid #7D7D7D;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .phone{
+            width: 40px;
+            font-size: 30px;
+        }
+        select { 
+        /* for Firefox */ 
+        -moz-appearance: none; 
+        /* for Safari, Chrome, Opera */ 
+        -webkit-appearance: none; 
+        }
+        select::-ms-expand{
+            display: none;
+        }
+
+        .gmap{
+            bottom: 0px;
+            margin: 0;
+            padding: 0px;
+            animation: jiggle 2s ease-in infinite;
+        }
+        .waze{
+            bottom: 0px;
+            padding-left: 0px;
+            margin: 0;
+            animation: jiggle 2s ease-in infinite;
+        }
+
+        @keyframes jiggle {
+            48%, 62% {
+                transform: scale(1.0, 1.0)
+            }
+            50% {
+                transform: scale(1.1, 0.9)
+            }
+            56% {
+                transform: scale(0.9, 1.1) translate(0, -5px)
+            }
+            59% {
+                transform: scale(1.0, 1.0) translate(0, -3px)
+            }
+        }
+
+
+        .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 120px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+        .hide{
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <!-- <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>HUBUNGI</h2>
+        <hr style="width: 100%;">
+        <p>Ali <b>0128645632</b></p>
+        <p>Abu <b>0128645632</b></p>
+        <p>Ahmad <b>0128645632</b></p>
+        </div> -->
+    
+    </div>
+    <!-- <iframe height="0" width="0" src="Sound/wed.mp3" frameborder="0" allowfullscreen></iframe> -->
+
+    <audio src="Sound/wed.mp3" autoplay>
+        <source src="Sound/wed.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Clock Malaysia time  -->
+    <div id="clock">
+        <div id="time">
+            <div class="t"><span id="day">00</span><span>HARI</span></div>
+            <div class="t"><span id="hour">00</span><span>JAM</span></div>
+            <div class="t"><span id="minutes">00</span><span>MINIT</span></div>
+            <div class="t"><span id="seconds">00</span><span>SAAT</span></div>
+        </div>
+    </div>
+
+    <div class="details">
+        <img src="Image/jawiwalimatul.png" alt="Walimatul Urus" class="jawi">
+        <h2>SABTU, 29 JAN 2022</h2>
+        <hr>
+        <h3>No. 17, Sri Klebang C/8 Grand Retreats, Bandar Baru Sri Klebang, Ipoh Perak</h3>
+
+        <h3 style="padding-top: 20px;" >Aturcara Majlis</h3>
+        <h4>11:30AM- 4:00PM</h4>
+    </div>
+
+    <footer>
+        <!-- <button id="myBtn" class="hide" data-toggle="modal" data-target="#myModal" href=""><img src="Image/phone.png" alt="phone" width="45px" class="gmap"></button> -->
+        <a  href="https://www.google.com/maps/dir/3.4458987,102.3607456/17,+8,+Jalan+Sri+Klebang+C%2F1,+Bandar+Baru+Sri+Klebang,+31200+Chemor,+Perak/@3.9455085,100.6149492,8z/data=!3m1!4b1!4m18!1m7!3m6!1s0x31ca93b3fec23c27:0x9af55cd499f39124!2s17,+8,+Jalan+Sri+Klebang+C%2F1,+Bandar+Baru+Sri+Klebang,+31200+Chemor,+Perak!3b1!8m2!3d4.6951971!4d101.1110571!4m9!1m1!4e1!1m5!1m1!1s0x31ca93b3fec23c27:0x9af55cd499f39124!2m2!1d101.1110571!2d4.6951971!3e0"><img src="Image/googlemaps.png" alt="" width="90px" class="gmap"></a>
+        <a class="waze1" href="https://www.waze.com/en-GB/live-map/directions/malaysia/perak/chemor/17,-jalan-sri-klebang-c1?place=ElExNywgSmFsYW4gU3JpIEtsZWJhbmcgQy8xLCBCYW5kYXIgQmFydSBTcmkgS2xlYmFuZywgMzEyMDAgQ2hlbW9yLCBQZXJhaywgTWFsYXlzaWEiUBJOCjQKMgkh9C0rtJPKMREW_Fs66DNOfBoeCxDuwe6hARoUChIJ62180X6RyjERkJEjJcc_-pIMEBEqFAoSCafpsSuxk8oxEfcN7xLz-Iwf&utm_campaign=waze_website&utm_medium=website_menu&utm_source=waze_website"><img src="Image/waze.png" alt="waze" width="40px" class="waze"></a>
+    </footer>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 29, 2022 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+            
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+            
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("day").innerHTML = days;
+        document.getElementById("hour").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+        
+        }, 1000);
+    </script>
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+    }
+    </script>
+</body>
+</html>
